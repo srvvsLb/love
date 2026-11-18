@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Feliz Aniversário, Juliane ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Chuva de corações interativa (fundo) -->
+  <canvas id="hearts"></canvas>
+  <div class="glow-layer"></div>
+
+  <!-- Contagem regressiva -->
+  <div id="countdown" class="screen">
+    <div class="count-number" id="count">3</div>
+    <p class="count-hint">toque na tela...</p>
+  </div>
+
+  <!-- Texto principal -->
+  <div id="main-text" class="screen hidden">
+    <h1 class="line" id="line1">Feliz</h1>
+    <h1 class="line" id="line2">Aniversário</h1>
+    <h1 class="line" id="line3">minha <span id="name">Juliane</span></h1>
+    <div class="big-heart" id="big-heart">❤️</div>
+  </div>
+
+  <!-- Cena fofa -->
+  <div id="cute-scene" class="screen hidden">
+    <div class="emoji">🎂✨</div>
+    <p class="cute-text">Hoje o mundo fica<br>ainda mais bonito<br>porque é o seu dia</p>
+  </div>
+
+  <!-- Cartinha -->
+  <div id="letter-screen" class="screen hidden">
+    <div class="envelope" id="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+      <div class="letter-paper">
+        <h2>Para minha Juliane ❤️</h2>
+        <p class="message">
+          Meu amor,<br><br>
+          Desde que você chegou na minha vida, tudo ganhou mais cor, mais sentido e muito mais coração.<br><br>
+          Você é o meu lugar favorito no mundo. O sorriso que acalma, o abraço que cura e o amor que eu quero pra sempre.<br><br>
+          Feliz aniversário, meu bem. Que este novo ano da sua vida seja tão lindo quanto o seu olhar.
+        </p>
+        <div class="mini-photos" id="miniPhotos"></div>
+        <button class="btn" id="btnGallery">Ver nosso coração 💖</button>
+      </div>
+    </div>
+    <p class="hint" id="hint">Toque no envelope para abrir</p>
+  </div>
+
+  <!-- Galeria coração -->
+  <div id="heart-gallery" class="screen hidden">
+    <p class="gallery-title">Nossos momentos 💕</p>
+    <div class="heart-photos" id="heartPhotos"></div>
+    <p class="gallery-hint">Toque em qualquer foto para lembrar</p>
+    <button class="btn final-btn" id="btnFinal">Continuar ❤️</button>
+  </div>
+
+  <!-- Mensagem final -->
+  <div id="final" class="screen hidden">
+    <h1 class="final-title">Te amo pra sempre</h1>
+    <div class="final-heart">❤️</div>
+    <p class="final-sub">Feliz aniversário, Juliane<br>meu maior presente</p>
+    <p class="final-touch">toque na tela para mais corações</p>
+  </div>
+
+  <!-- Lightbox das fotos -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Nosso momento" />
+        <div class="lightbox-placeholder" id="lightboxPlaceholder">
+          <span>📷</span>
+          <p>Coloque a foto aqui</p>
+        </div>
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
